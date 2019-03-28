@@ -8,9 +8,7 @@ const Popular = ({movies}) => {
         <div className='row'>
             <div className='col-md-12'>
                 <div className='card-group'>
-                    <Movie movies={movies}/>
-                    <Movie movies={movies}/>
-                    <Movie movies={movies}/>
+                    <Movie movies={movies} />
                 </div>
             </div>
         </div>
