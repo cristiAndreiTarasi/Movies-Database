@@ -32,8 +32,10 @@ class App extends Component {
             <Fragment>
                 <Navbar />
                 <div className='container'>
-                    <h1 className='display-1'>Popular movies</h1>
-                    <Popular movies={this.state.movies}/>
+                    <div className='row'>
+                        <h1 className='display-1'>In Theaters</h1>
+                        <Popular movies={this.state.movies}/>
+                    </div>
                 </div>
             </Fragment>
         );
