@@ -32,9 +32,9 @@ class App extends Component {
             <Fragment>
                 <Navbar />
                 <div className='container'>
-                    <div className='row'>
+                    <div className='row  no-gutters'>
                         <h1 className='display-1'>In Theaters</h1>
-                        <Popular movies={this.state.movies}/>
+                        <Popular movies={this.state.movies} />
                     </div>
                 </div>
             </Fragment>

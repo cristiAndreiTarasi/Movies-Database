@@ -9,9 +9,6 @@ class Movie extends Component {
             <div className='col-lg-3 col-md-4 col-sm-6'>
                 <div className="card">
                     <img className="card-img-top" src={`${IMG_URL}` + poster_path} alt="Card image cap" />
-                    <div className="card-body">
-                        <h5 className="card-title">{title}</h5>
-                    </div>
                 </div>
             </div>
         );
