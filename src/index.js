@@ -10,7 +10,7 @@ import { AppContainer } from 'react-hot-loader';
 import './styles/main.scss';
 
 // main component
-import App from './App.jsx';
+import App from './components/App.jsx';
 
 // Clears the console after every reload/refresh, 
 // this way solving the HMR overly verbose console output
@@ -33,7 +33,7 @@ const render = Component => {
 render(App);
 
 if(module.hot) {
-    module.hot.accept('./App.jsx', () => { render(App) });
+    module.hot.accept('./components/App.jsx', () => { render(App) });
 }
 
 

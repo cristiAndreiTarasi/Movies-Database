@@ -3,8 +3,8 @@ import React, { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader/root';
 
 // Components
-import Popular from './components/Popular.jsx';
-import Navbar from './components/Navbar.jsx';
+import Popular from './Popular.jsx';
+import Navbar from './Navbar.jsx';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '?api_key=b8250ca3c30d2309a8d3f99989c99410';
@@ -33,7 +33,6 @@ class App extends Component {
                 <Navbar />
                 <div className='container'>
                     <div className='row'>
-                        <h1 className='display-1'>In Theaters</h1>
                         <Popular movies={this.state.movies}/>
                     </div>
                 </div>
