@@ -1,0 +1,28 @@
+.carousel-indicators li {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-bottom: 50px;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+
+.carousel-inner {
+    height: 870px;
+
+    .carousel-item {
+        height: 100%;
+        
+        .carousel-item-img {
+            width: 100%;
+            min-height: 870px;
+            object-fit: cover;
+        }
+    } 
+}

@@ -1,0 +1,15 @@
+.jumbotron {
+    position: relative;
+    border-radius: 0;
+    height: 870px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+
+    &::before {
+        content: '';
+        
+    }
+}

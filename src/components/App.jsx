@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader/root';
 
 // Components
 import Popular from './Popular.jsx';
-import Navbar from './Navbar.jsx';
+import MainSlider from './MainSlider.jsx';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '?api_key=b8250ca3c30d2309a8d3f99989c99410';
@@ -30,7 +30,7 @@ class App extends Component {
     render () {
         return (
             <Fragment>
-                <Navbar />
+                <MainSlider movies={this.state.movies} />
                 <div className='container'>
                     <div className='row'>
                         <Popular movies={this.state.movies}/>
