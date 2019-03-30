@@ -5,8 +5,8 @@ class CarouselItem extends Component {
     render () {
         const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
         const { backdrop_path, title, genre_ids, release_date } = this.props.movie;
-        const random = Math.floor(Math.random() * gen.length);
-        console.log(gen[random].name)
+        const random = Math.floor(Math.random() * genre_ids.length);
+        console.log(gen[random])
 
         return (
             <Fragment>
@@ -19,12 +19,13 @@ class CarouselItem extends Component {
                 <div className="carousel-caption p-0">
                     <div className='container p-0'>
                         <h1>{title}</h1>
-                        {/* {genre_ids.map(id => {
-                            return id === gen[random].id && (
-                                <p key={id}>{gen[random].name}</p>
-                            );
-                        })} */}
-                        <p className='lead'>Action, Drama, Comedy</p>
+                        <p className='lead'>
+                            {gen.map (genre => (
+                                genre_ids.includes(genre.id) 
+                                    ? `${genre.name}\xa0\xa0\xa0\xa0` 
+                                    : null
+                            ))}
+                        </p>
                         <button type="button" class="btn btn-warning">
                             <span>Watch Trailer &nbsp;</span>
                             <i className="far fa-play-circle"></i>

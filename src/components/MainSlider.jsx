@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import Navbar from './Navbar.jsx';
 import CarouselItem from './CarouselItem.jsx';
+import gen from '../assets/genres';
 
 class MainSlider extends Component {
     render () {
@@ -54,12 +55,13 @@ return (
                                     <div className="carousel-caption p-0">
                                         <div className='container p-0'>
                                             <h1>{movie.title}</h1>
-                                            {/* {genre_ids.map(id => {
-                                            return id === gen[random].id && (
-                                            <p key={id}>{gen[random].name}</p>
-                                            );
-                                            })} */}
-                                            <p className='lead'>Action, Drama, Comedy</p>
+                                            <p className='lead'>
+                                                {gen.map (genre => (
+                                                    movie.genre_ids.includes(genre.id) 
+                                                        ? `${genre.name}\xa0\xa0\xa0\xa0` 
+                                                        : null
+                                                ))}
+                                            </p>
                                             <button type="button" class="btn btn-warning">
                                                 <span>Watch Trailer &nbsp;</span>
                                                 <i className="far fa-play-circle"></i>
