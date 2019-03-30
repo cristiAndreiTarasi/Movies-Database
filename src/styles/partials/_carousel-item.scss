@@ -1,0 +1,65 @@
+
+.carousel-caption { 
+    position: absolute;
+    top: 330px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+        align-items: flex-start;
+        // background-color: red;
+        width: 91%;
+        height: 420px;
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 1rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 50px;
+        }
+        
+        .btn-warning {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            border-radius: 50px;
+            margin-left: 0;
+            margin-bottom: 170px;
+        }
+
+        .extra-info {
+            .in-theather {
+                display: block;
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+                font-size: 1rem;
+                letter-spacing: .2rem;
+                border-radius: 50px;
+                margin-left: 0;
+                text-align: left;
+                line-height: 20px;
+            }
+            
+            .release {
+                font-weight: 400;
+                font-size: 1.3rem;
+                color: #e4bb23;
+            }
+        }
+    }
+}

@@ -10,6 +10,12 @@
 
     &::before {
         content: '';
-        
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // background-image: linear-gradient(to bottom, rgba(228, 187, 35, .6), rgba(207, 0, 195, .6));
+        background-color: transparentize(#6b5710, 0.5);
+        z-index: 1;
     }
 }
