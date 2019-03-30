@@ -10,7 +10,12 @@
 
 // Partials
 @import './partials/_base';
+
+// Jumbotron
 @import './partials/_jumbotron';
 @import './partials/_navbar';
 @import './partials/_slider';
 @import './partials/_carousel-item';
+
+// Main Body
+@import './partials/panel-group';

@@ -55,21 +55,21 @@ return (
                                     <div className="carousel-caption p-0">
                                         <div className='container p-0'>
                                             <h1>{movie.title}</h1>
-                                            <p className='lead'>
-                                                {gen.map (genre => (
+                                            <p className='lead' key={movie.id}>
+                                                {gen.map ((genre, index) => (
                                                     movie.genre_ids.includes(genre.id) 
                                                         ? `${genre.name}\xa0\xa0\xa0\xa0` 
                                                         : null
                                                 ))}
                                             </p>
-                                            <button type="button" class="btn btn-warning">
+                                            <button type="button" className="btn btn-warning">
                                                 <span>Watch Trailer &nbsp;</span>
                                                 <i className="far fa-play-circle"></i>
                                             </button>
                                             <div className='extra-info'>
                                                 <span className='in-theather'>In theaters</span>
                                                 <br />
-                                                <span className='release'>{movie.release_date}</span>
+                                                <span className='release'>{movie.release_date.split('-').join(' ')}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -79,8 +79,8 @@ return (
                     </div>
                 
                     {this.props.movies.map (movie => (
-                        <div className="carousel-item" key={movie.id}>
-                            <CarouselItem movie={movie} />
+                        <div className="carousel-item">
+                            <CarouselItem movie={movie} key={movie.id} />
                         </div>
                     ))}
                 </div>

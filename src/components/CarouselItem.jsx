@@ -5,8 +5,6 @@ class CarouselItem extends Component {
     render () {
         const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
         const { backdrop_path, title, genre_ids, release_date } = this.props.movie;
-        const random = Math.floor(Math.random() * genre_ids.length);
-        console.log(gen[random])
 
         return (
             <Fragment>
@@ -26,14 +24,16 @@ class CarouselItem extends Component {
                                     : null
                             ))}
                         </p>
-                        <button type="button" class="btn btn-warning">
+                        <button type="button" className="btn btn-warning">
                             <span>Watch Trailer &nbsp;</span>
                             <i className="far fa-play-circle"></i>
                         </button>
                         <div className='extra-info'>
                             <span className='in-theather'>In theaters</span>
                             <br />
-                            <span className='release'>{release_date}</span>
+                            <span className='release'>
+                                {release_date.split('-').join(' ')}
+                            </span>
                         </div>
                     </div>
                 </div>

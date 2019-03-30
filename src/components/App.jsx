@@ -31,11 +31,7 @@ class App extends Component {
         return (
             <Fragment>
                 <MainSlider movies={this.state.movies} />
-                <div className='container'>
-                    <div className='row'>
-                        <Popular movies={this.state.movies}/>
-                    </div>
-                </div>
+                <Popular movies={this.state.movies}/>
             </Fragment>
         );
     }
