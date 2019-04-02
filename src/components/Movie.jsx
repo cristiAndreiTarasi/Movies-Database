@@ -21,7 +21,11 @@ class Movie extends Component {
                         ))}
                     </h4>
                     <h5 className="panel-rating">
-                        <span><i className="fas fa-heart"></i>&nbsp;{vote_average}</span>
+                        <p>
+                            <i className="fas fa-heart"></i>
+                            &nbsp;
+                            <span>{vote_average}</span>
+                        </p>
                     </h5>
                 </div>
             </div>

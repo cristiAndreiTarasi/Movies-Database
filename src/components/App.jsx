@@ -2,6 +2,9 @@
 import React, { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader/root';
 
+// Assets
+import '../assets/movie_rating';
+
 // Components
 import Popular from './Popular.jsx';
 import MainSlider from './MainSlider.jsx';

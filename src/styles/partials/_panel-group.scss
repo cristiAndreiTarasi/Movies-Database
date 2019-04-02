@@ -15,7 +15,7 @@
         border-radius: 4px;
         overflow: hidden;
         background-color: #fff;
-        box-shadow: 0 10px 10px #e1e1e1;
+        box-shadow: 0 10px 5px #e1e1e1;
 
         .panel-img {
             width: 330px;
@@ -48,6 +48,11 @@
             .panel-rating {
                 font-size: 1rem;
                 color: #bbb;
+
+                i {
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                }
             }
         }
     }
