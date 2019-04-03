@@ -1,54 +1,50 @@
 import React from 'react';
+import { Route, Switch, Link } from 'react-router-dom';
 
-const Navbar = () => {
-    return (
-        <nav className="mb-1 navbar navbar-expand-lg navbar-dark info-color p-0">
-            <div className='container'>
-                <a className="navbar-brand" href="#">
-                    <img src='../images/mdb.png' />
-                </a>
-                <button 
-                    className="navbar-toggler" 
-                    type="button" 
-                    data-toggle="collapse" 
-                    data-target="#navbarSupportedContent-4"
-                    aria-controls="navbarSupportedContent-4" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+import Popular from './Popular.jsx';
+import InTheaters from './InTheaters.jsx';
+import Kids from './Kids.jsx';
+import TV from './TV.jsx';
+import NotFound from './NotFound.jsx';
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent-4">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">
-                                Popular
-                                <span className="sr-only">(current)</span>
-                            </a>
-                        </li>
+export default () => (
+    <nav className="mb-1 navbar navbar-expand-lg navbar-dark info-color p-0">
+        <div className='container'>
+            <a className="navbar-brand" href="#">
+                <img src='../images/mdb.png' />
+            </a>
+            <button 
+                className="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
+                <span className="navbar-toggler-icon"></span>
+            </button>
 
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">In Theaters</a>
-                        </li>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link to='/'>Popular</Link>
+                    </li>
 
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Kids</a>
-                        </li>
+                    <li className="nav-item">
+                        <Link to='/theaters'>In Theaters</Link>
+                    </li>
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link">TV</a>
-                        </li>
-                    </ul>
+                    <li className="nav-item active">
+                        <Link to='/kids'>Kids</Link>
+                    </li>
 
-                    {/* <form className="form-inline">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form> */}
-                </div>
+                    <li className="nav-item">
+                        <Link to='/tv'>TV</Link>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    );
-}
+        </div>
+    </nav>
+);
  
-export default Navbar;

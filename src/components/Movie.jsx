@@ -4,7 +4,7 @@ import gen from '../assets/genres';
 class Movie extends Component {
     render () {
         const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
-        const { poster_path, title, genre_ids, vote_average } = this.props.movie;
+        const { poster_path, title, genre_ids, vote_average } = this.props.data;
 
         return (
             <div className="panel">

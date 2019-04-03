@@ -18,7 +18,7 @@ window.onload = () => {
         return pair.heart.style.backgroundImage = `
             linear-gradient(
                 to top,
-                rgba(255,0,0,0.7) ${pair.score * 10}%,
+                rgba(235,111,85,1) ${pair.score * 10}%,
                 rgba(187,187,187,0.7) 0%
             )
         `;
