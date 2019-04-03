@@ -1,5 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <div>Hello from kids</div>
+    <div>
+        <h1 className='display-1'>Hello from kids</h1>
+    </div>
 );
