@@ -1,6 +1,6 @@
 
 
-window.onload = () => {
+export default () => {
     const panelRating = document.querySelectorAll('.panel-rating p');
 
     let heart_score_pair_arr =  [];

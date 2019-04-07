@@ -5,7 +5,7 @@ export default () => (
     <nav class="navbar navbar-expand-lg m-0">
         <div className='container'>
             <NavLink class="navbar-brand" to='/'>
-                <img src='../images/mdb.png' />
+                <img src='../../images/mdb.png' />
             </NavLink>
 
             <button 
@@ -17,22 +17,23 @@ export default () => (
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <NavLink activeClassName="active" to='/'>Home
+                    <li class="nav-item">
+                        <NavLink exact activeClassName='is-active' to='/'>
+                            Popular
                             <span class="sr-only">(current)</span>
                         </NavLink>
                     </li>
 
                     <li class="nav-item">
-                        <NavLink activeClassName="active" to='/theaters'>In Theaters</NavLink>
+                        <NavLink exact activeClassName='is-active' to='/kids'>
+                            Kids
+                        </NavLink>
                     </li>
 
                     <li class="nav-item">
-                        <NavLink activeClassName="active" to='/kids'>Kids</NavLink>
-                    </li>
-
-                    <li class="nav-item">
-                        <NavLink activeClassName="active" to='/tv'>TV</NavLink>
+                        <NavLink exact activeClassName='is-active' to='/tv'>
+                            TV
+                        </NavLink>
                     </li>
                 </ul>
             </div>

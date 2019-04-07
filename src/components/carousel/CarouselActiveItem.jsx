@@ -20,7 +20,7 @@ export default ({movies}) => {
     
                         <div className="carousel-caption p-0">
                             <div className='container p-0'>
-                                <h1>{movie.title}</h1>
+                                <h1>{movie.title || movie.name}</h1>
                                 <p className='lead' key={movie.id}>
                                     {gen.map ((genre, index) => (
                                         movie.genre_ids.includes(genre.id) 
@@ -35,7 +35,9 @@ export default ({movies}) => {
                                 <div className='extra-info'>
                                     <span className='in-theather'>In theaters</span>
                                     <br />
-                                    <span className='release'>{movie.release_date.split('-').join(' ')}</span>
+                                    <span className='release'>
+                                        {(movie.release_date || movie.first_air_date).split('-').join(' ')}
+                                    </span>
                                 </div>
                             </div>
                         </div>

@@ -3,7 +3,7 @@ import gen from '../../assets/genres.js';
 
 export default ({movie}) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
-    const { backdrop_path, title, genre_ids, release_date } = movie;
+    const { backdrop_path, title, genre_ids, release_date, original_name, first_air_date } = movie;
 
     return (
         <Fragment>
@@ -15,7 +15,7 @@ export default ({movie}) => {
 
             <div className="carousel-caption p-0">
                 <div className='container p-0'>
-                    <h1>{title}</h1>
+                    <h1>{title || original_name}</h1>
                     <p className='lead'>
                         {gen.map (genre => (
                             genre_ids.includes(genre.id) 
@@ -31,7 +31,7 @@ export default ({movie}) => {
                         <span className='in-theather'>In theaters</span>
                         <br />
                         <span className='release'>
-                            {release_date.split('-').join(' ')}
+                            {(release_date || first_air_date).split('-').join(' ')}
                         </span>
                     </div>
                 </div>
