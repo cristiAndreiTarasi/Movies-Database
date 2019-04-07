@@ -10,9 +10,8 @@ export default (url) => {
         const api_movies = data.results;
         
         setMovies(api_movies);
-
         loadRating(); 
-        console.log(api_movies);
+        // console.log(api_movies);
     }, []); 
 
     return {movies};
