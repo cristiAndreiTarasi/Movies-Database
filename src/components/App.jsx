@@ -9,6 +9,7 @@ import Theaters from './sections/Theaters.jsx';
 import Kids from './sections/Kids.jsx';
 import TV from './sections/TV.jsx';
 import NotFound from './sections/NotFound.jsx';
+import LoadMoreButton from './sections/LoadMoreButton.jsx';
 
 
 export default hot(() => (
@@ -21,6 +22,7 @@ export default hot(() => (
                 <Route path='/tv' component={TV} exact />
                 <Route component={NotFound} exact />
             </Switch>
+            <LoadMoreButton />
         </Fragment>
     </BrowserRouter>
 ));

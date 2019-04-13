@@ -3,15 +3,25 @@ import loadRating from './movie_rating';
 
 export default (url) => {
     const [movies, setMovies] = useState([]);
+    const [page, setPage] = useState(1);
+    
+    const loadMovies = async () => {
+        try {
+            const response = await fetch(`${url}&page=${page}`);
 
-    useEffect(async () => {
-        const response = await fetch(url);
-        const data = await response.json();
-        const api_movies = data.results;
-        
-        setMovies(api_movies);
-        loadRating(); 
-        // console.log(api_movies);
+            if (!response.ok) throw Error(response.statusText);
+
+            const data = await response.json();
+            setMovies(data.results);
+            loadRating ();
+        } 
+        catch (error) {
+            console.log(error)
+        }
+    };
+
+    useEffect(() => {
+        loadMovies ();
     }, []); 
 
     return {movies};

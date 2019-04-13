@@ -19,7 +19,7 @@ export default () => {
             linear-gradient(
                 to top,
                 rgba(235,111,85,1) ${pair.score * 10}%,
-                rgba(187,187,187,0.7) 0%
+                rgba(255,255,255,0.9) 0%
             )
         `;
     });
