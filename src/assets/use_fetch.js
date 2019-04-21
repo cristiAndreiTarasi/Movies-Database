@@ -3,11 +3,10 @@ import loadRating from './movie_rating';
 
 export default (url) => {
     const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(1);
     
     const loadMovies = async () => {
         try {
-            const response = await fetch(`${url}&page=${page}`);
+            const response = await fetch(url);
 
             if (!response.ok) throw Error(response.statusText);
 
@@ -24,5 +23,7 @@ export default (url) => {
         loadMovies ();
     }, []); 
 
-    return {movies};
+    console.log(movies);
+
+    return movies;
 };

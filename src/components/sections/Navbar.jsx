@@ -19,7 +19,7 @@ export default () => (
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <NavLink exact activeClassName='is-active' to='/'>
-                            Popular
+                            Home
                             <span class="sr-only">(current)</span>
                         </NavLink>
                     </li>

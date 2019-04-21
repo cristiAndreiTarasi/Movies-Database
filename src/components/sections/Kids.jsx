@@ -9,12 +9,12 @@ import Carousel from '../carousel/Carousel.jsx';
 import MoviesList from '../movies_list/MoviesList.jsx';
 
 export default () => {
-    const {movies} = useFetch(`${BASE_URL}${DISCOVER}${API_KEY}&sort_by=popularity.desc&certification_country=US&certification.lte=PG&include_adult=false&include_video=false&page=1`);
+    const movies = useFetch(`${BASE_URL}${DISCOVER}${API_KEY}&sort_by=popularity.desc&certification_country=US&certification.lte=PG`);
     
     return (
        <Fragment>
             <Carousel movies={movies} />
-            <MoviesList collection={movies} />
+            <MoviesList movies={movies} />
        </Fragment>
     );
 };

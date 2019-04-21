@@ -1,18 +1,14 @@
-
-import React, { Component } from 'react';
-
+import React from 'react';
 import Movie from './Movie.jsx';
 
-export default ({collection}) => (
+export default ({movies}) =>  (
     <div className='container'>
         <div className='row'>
             <div className='panel-group'>
-                {collection.map(movie => (
+                {movies.map(movie => (
                     <Movie data={movie} key={movie.id} />
                 ))}
             </div>
         </div>
     </div>
 );
-
-

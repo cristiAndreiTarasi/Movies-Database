@@ -1,26 +1,22 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const path = require
 
 module.exports = {
-    entry: {
-        main: [
-            "react-hot-loader/patch", 
-            "@babel/polyfill", 
-            "./src/index.js"
-        ],
-        // here other entries
-    },
+	entry: ['@babel/polyfill', './src/index.js'],
 
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                loaders: ['react-hot-loader/webpack', 'babel-loader'],
-            },
-            {
-                test: /\.html$/,
-                use: ['html-loader']
-            },
+	module: {
+		rules: [
+			{
+				test: /\.html$/,
+				use: [{
+					loader: 'html-loader',
+					options: { minimize: true }
+				}]
+			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader'
+			},
             {
                 test: /\.(jpg|png|gif|svg|pdf|ico)$/,
                 use: {
@@ -30,7 +26,7 @@ module.exports = {
                         outputPath: 'images'
                     }
                 }
-            }
-        ]
-    },
-}
+            },
+		]
+	},
+};
