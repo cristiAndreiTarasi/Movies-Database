@@ -1,13 +1,14 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import gen from '../../assets/genres.js';
-import { BASE_URL, API_KEY, DISCOVER, IMG_URL, YOUTUBE_LINK } from '../../assets/api_bits.js';
-import MovieModal from './MovieModal.jsx';
-
-
+import { BASE_URL, API_KEY, IMG_URL, YOUTUBE_LINK } from '../../assets/api_bits.js';
+import Modal from './Modal.jsx';
 
 export default ({data}) => { 
-    const [selectedMovie, setSelectedMovie] = useState(undefined);
     const [video, setVideo] = useState(YOUTUBE_LINK);
+    const modalProps = {
+        ariaLabel: 'A label describing the Modal\'s current content',
+        triggerText: 'To trigger the Modal',
+    };
 
     useEffect(() => {
         const get_movie_call = async () => {
@@ -23,10 +24,7 @@ export default ({data}) => {
 
     return (
         <Fragment>
-            <div 
-                className='panel' 
-                onClick={() => setSelectedMovie(data)}
-            >
+            <div className='panel'>
                 <img className="panel-img" src={`${IMG_URL}` + data.poster_path} alt={data.title} />
                 <div className="panel-body">
                     <h3 className='panel-title'>
@@ -47,17 +45,10 @@ export default ({data}) => {
                             &nbsp;
                             <span>{data.vote_average}</span>
                         </p>
+                        <Modal {...modalProps} />
                     </h5>
                 </div>
-
-                <MovieModal 
-                    selectedMovie={selectedMovie} 
-                    closeModal={() => setSelectedMovie(undefined)} 
-                    video={video}
-                />
             </div>
         </Fragment>
     );
 }
-
-

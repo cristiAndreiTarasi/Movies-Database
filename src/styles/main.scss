@@ -18,5 +18,8 @@
 @import './partials/_carousel-item';
 
 // Main Body
-@import './partials/panel-group';
-@import './partials/load_button';
+@import './partials/_panel-group';
+@import './partials/_load_button';
+
+// Panels
+@import './partials/_modal';
