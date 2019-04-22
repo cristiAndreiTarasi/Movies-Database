@@ -6,8 +6,9 @@ export default ({
     modalRef, 
     onClickAway,
     onClose, 
-    onKeyDown, 
-    role='dialog'
+    role='dialog',
+    data,
+    video
 }) => {
     return ReactDOM.createPortal(
         <aside 
@@ -16,7 +17,6 @@ export default ({
             aria-label={ariaLabel}
             aria-modal='true' 
             tabIndex='-1'
-            onKeyDown={onKeyDown}
             onClick={onClickAway}
         >
             <div className="c-modal" ref={modalRef}>
@@ -28,8 +28,16 @@ export default ({
                 </button>
                 
                 <div className="c-modal__body">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita facere, alias quaerat praesentium, illum, dolorem doloribus aliquid eius architecto reprehenderit ipsum sint iure officiis voluptatem doloremque quas dolore iusto vel.</p>
+                    <div className='container'>
+                        <h1>{data.title}</h1>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe 
+                                class="embed-responsive-item" 
+                                src={video}
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <p className='lead'>{data.overview}</p>
                     </div>
                 </div>
             </div>

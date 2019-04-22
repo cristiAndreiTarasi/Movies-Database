@@ -1,4 +1,5 @@
 
+import { hot } from 'react-hot-loader/root';
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ import TV from './sections/TV.jsx';
 import NotFound from './sections/NotFound.jsx';
 import LoadMoreButton from './sections/LoadMoreButton.jsx';
 
-export default () => (
+export default hot(() => (
     <BrowserRouter>
         <Fragment>
             <Navbar />
@@ -23,4 +24,4 @@ export default () => (
             <LoadMoreButton />
         </Fragment>
     </BrowserRouter>
-);
+));

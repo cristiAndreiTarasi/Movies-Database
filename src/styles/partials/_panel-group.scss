@@ -55,13 +55,30 @@
                 color: #e4bb23;
             }
 
-            .panel-rating {
-                font-size: 1rem;
-                color: #bbb;
+            .panel-bottom {
+                display: flex;
+                justify-content: space-between;
 
-                i {
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; 
+                .panel-rating {
+                    font-size: 1rem;
+                    color: #bbb;
+    
+                    i {
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent; 
+                    }
+                }
+
+                .trailer {
+                    all: unset;
+                    background-color: #e4bb23;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 400;
+                    border-radius: 50px;
+                    margin-left: 0;
+                    margin-bottom: 170px;
+                    padding: 2px;
+                    cursor: pointer;
                 }
             }
         }

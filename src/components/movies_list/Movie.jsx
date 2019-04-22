@@ -7,7 +7,6 @@ export default ({data}) => {
     const [video, setVideo] = useState(YOUTUBE_LINK);
     const modalProps = {
         ariaLabel: 'A label describing the Modal\'s current content',
-        triggerText: 'To trigger the Modal',
     };
 
     useEffect(() => {
@@ -39,16 +38,18 @@ export default ({data}) => {
                                 : null
                         ))}
                     </h4>
-                    <h5 className="panel-rating">
-                        <p>
-                            <i className="fas fa-heart"></i>
-                            &nbsp;
-                            <span>{data.vote_average}</span>
-                        </p>
-                        <Modal {...modalProps} />
-                    </h5>
+                    <div className='panel-bottom'>
+                        <h5 className="panel-rating">
+                            <p>
+                                <i className="fas fa-heart"></i>
+                                &nbsp;
+                                <span>{data.vote_average}</span>
+                            </p>
+                        </h5>
+                        <Modal {...modalProps} data={data} video={video} />
+                    </div>
                 </div>
             </div>
         </Fragment>
     );
-}
+};

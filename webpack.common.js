@@ -15,7 +15,7 @@ module.exports = {
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader'
+				loaders: ['babel-loader', 'react-hot-loader/webpack']
 			},
             {
                 test: /\.(jpg|png|gif|svg|pdf|ico)$/,
