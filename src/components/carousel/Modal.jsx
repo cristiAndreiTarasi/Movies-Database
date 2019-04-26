@@ -15,7 +15,7 @@ export default ({role, data, video}) => {
     
     return (
         <Fragment>
-            <ModalTrigger onOpen={() => setIsOpen(true)} />
+            <ModalTrigger />
             {isOpen && 
                 <ModalContent 
                     modalRef={n => modalNode = n}

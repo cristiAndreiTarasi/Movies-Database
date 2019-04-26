@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default ({
-    ariaLabel, 
     modalRef, 
     onClickAway,
     onClose, 
     role='dialog',
-    data,
+    movie,
     video
 }) => {
     return ReactDOM.createPortal(
@@ -28,7 +27,7 @@ export default ({
                 
                 <div className="c-modal__body">
                     <div className='container'>
-                        <h1>{data.title}</h1>
+                        <h1>{movie.title}</h1>
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe 
                                 class="embed-responsive-item" 
@@ -36,7 +35,7 @@ export default ({
                                 allowFullScreen
                             ></iframe>
                         </div>
-                        <p className='lead'>{data.overview}</p>
+                        <p className='lead'>{movie.overview}</p>
                     </div>
                 </div>
             </div>

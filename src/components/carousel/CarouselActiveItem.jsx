@@ -1,11 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import gen from '../../assets/genres.js';
 
-
 export default ({movies}) => {
-    const IMG_URL = 'https://image.tmdb.org/t/p/original/';
+    const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
     const random = Math.floor(Math.random() * movies.length);
-        
+    
     return (
         <div className="carousel-item active">
             {movies.map ((movie, index) => {

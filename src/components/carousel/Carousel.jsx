@@ -16,11 +16,10 @@ export default ({movies}) => (
                     <CarouselActiveItem movies={movies} />
                     {movies.map (movie => (
                         <div className="carousel-item">
-                            <CarouselItem movie={movie} key={movie.id} />
+                            <CarouselItem data={movie} key={movie.id} />
                         </div>
                     ))}
                 </div>
-
                 <CarouselControls />
             </div>
         </div>

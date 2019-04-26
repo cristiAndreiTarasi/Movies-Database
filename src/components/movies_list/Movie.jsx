@@ -5,9 +5,6 @@ import Modal from './Modal.jsx';
 
 export default ({data}) => { 
     const [video, setVideo] = useState(YOUTUBE_LINK);
-    const modalProps = {
-        ariaLabel: 'A label describing the Modal\'s current content',
-    };
 
     useEffect(() => {
         const get_movie_call = async () => {
@@ -15,7 +12,7 @@ export default ({data}) => {
             const json = await movie.json();
 
             setVideo(`${video}${json.results[0].key}`);
-            console.log(video);
+            // console.log(video);
         }
 
         get_movie_call();
@@ -46,7 +43,7 @@ export default ({data}) => {
                                 <span>{data.vote_average}</span>
                             </p>
                         </h5>
-                        <Modal {...modalProps} data={data} video={video} />
+                        <Modal data={data} video={video} />
                     </div>
                 </div>
             </div>

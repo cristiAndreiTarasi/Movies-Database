@@ -23,7 +23,5 @@ export default (url) => {
         loadMovies ();
     }, []); 
 
-    console.log(movies);
-
     return movies;
 };
