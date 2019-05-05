@@ -9,7 +9,7 @@ import Carousel from '../carousel/Carousel.jsx';
 import MoviesList from '../movies_list/MoviesList.jsx';
 
 export default () => {
-    const movies = useFetch(`${BASE_URL}${DISCOVER}${API_KEY}&with_release_type=2|3&region=US`);
+    const movies = useFetch(`${BASE_URL}${DISCOVER}${API_KEY}&language=en-US`);
 
     return (
        <Fragment>
