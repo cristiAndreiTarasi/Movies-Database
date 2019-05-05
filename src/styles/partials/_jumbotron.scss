@@ -16,6 +16,7 @@
         height: 100%;
         // background-image: linear-gradient(to bottom, rgba(228, 187, 35, .6), rgba(207, 0, 195, .6));
         background-color: transparentize(#6b5710, 0.5);
+        // mix-blend-mode: multiply;
         z-index: 1;
     }
 }

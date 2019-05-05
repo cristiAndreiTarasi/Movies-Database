@@ -19,13 +19,15 @@ module.exports = {
 			},
             {
                 test: /\.(jpg|png|gif|svg|pdf|ico)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'images'
-                    }
-                }
+                use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[hash].[ext]',
+							outputPath: 'images'
+						}
+					}
+				]
             },
 		]
 	},

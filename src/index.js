@@ -1,5 +1,5 @@
 // babel polyfill for new features - generators, async/await etc
-// import '@babel/polyfill';
+import '@babel/polyfill';
 
 // react modules
 import React from 'react';
