@@ -2,6 +2,7 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Fragment, Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { GlobalProvider } from './ContextComponent.jsx';
 
 // components
 import Navbar from './sections/Navbar.jsx';
@@ -20,18 +21,20 @@ import LoadMoreButton from './sections/LoadMoreButton.jsx';
 // const LoadMoreButton = lazy(() => import('./sections/LoadMoreButton.jsx')); 
 
 export default hot(() => (
-    <BrowserRouter>
-        <Fragment>
-            {/* <Suspense fallback={<p>Loading... ⏳⏳⏳</p>}> */}
-                <Navbar />
-                <Switch>
-                    <Route path='/' component={Theaters} exact />
-                    <Route path='/kids' component={Kids} exact />
-                    <Route path='/tv' component={TV} exact />
-                    <Route component={Theaters} exact />
-                </Switch>
-                <LoadMoreButton />
-            {/* </Suspense> */}
-        </Fragment>
-    </BrowserRouter>
+    <GlobalProvider>
+        <BrowserRouter>
+            <Fragment>
+                {/* <Suspense fallback={<p>Loading... ⏳⏳⏳</p>}> */}
+                    <Navbar />
+                    <Switch>
+                        <Route path='/' component={Theaters} exact />
+                        <Route path='/kids' component={Kids} exact />
+                        <Route path='/tv' component={TV} exact />
+                        <Route component={Theaters} exact />
+                    </Switch>
+                    <LoadMoreButton />
+                {/* </Suspense> */}
+            </Fragment>
+        </BrowserRouter>
+    </GlobalProvider>
 ));

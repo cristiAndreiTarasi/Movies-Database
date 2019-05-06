@@ -1,53 +1,50 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useContext } from 'react';
 import gen from '../../assets/genres.js';
 import { BASE_URL, API_KEY, YOUTUBE_LINK } from '../../assets/api_bits.js';
-import Modal from './Modal.jsx';
+import Modal from '../modal/Modal.jsx';
+import { GlobalContext } from '../ContextComponent.jsx';
 
-export default ({data}) => {
+export default (/* {data} */) => {
+    const [movies] = useContext(GlobalContext);
     const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
-    const { backdrop_path, title, genre_ids, release_date, original_name, first_air_date } = data;
-    const [video, setVideo] = useState(YOUTUBE_LINK);
+    // const { backdrop_path, title, genre_ids, release_date, original_name, first_air_date } = data;
 
-    useEffect(() => {
-        const get_movie_call = async () => {
-            const movie = await fetch(`${BASE_URL}/movie/${data.id}/videos${API_KEY}&language=en-US`);
-            const json = await movie.json();
-
-            setVideo(`${video}${json.results[0].key}`);
-            // console.log(video);
-        }
-
-        get_movie_call();
-    }, []);
+    console.log(movies);
 
     return (
         <Fragment>
-            <img 
-                className="carousel-item-img" 
-                alt="First slide" 
-                src={`${IMG_URL}` + backdrop_path}
-            />
+            {movies.map(movie => (
+                <Fragment>
+                    <img 
+                        className="carousel-item-img" 
+                        alt="First slide" 
+                        src={`${IMG_URL}${movie.backdrop_path}`}
+                    />
+    
+                    <div className="carousel-caption p-0">
+                            <div className='container p-0'>
+                                <h1>{movie.title || movie.original_name}</h1>
+                                <p className='lead'>
+                                    {gen.map (genre => (
+                                        genre_ids.includes(genre.id) 
+                                            ? `${genre.name}\xa0\xa0\xa0\xa0` 
+                                            : null
+                                    ))}
+                                </p>
 
-            <div className="carousel-caption p-0">
-                <div className='container p-0'>
-                    <h1>{title || original_name}</h1>
-                    <p className='lead'>
-                        {gen.map (genre => (
-                            genre_ids.includes(genre.id) 
-                                ? `${genre.name}\xa0\xa0\xa0\xa0` 
-                                : null
-                        ))}
-                    </p>
-                    <Modal data={data} video={video} />
-                    <div className='extra-info'>
-                        <span className='in-theather'>In theaters</span>
-                        <br />
-                        <span className='release'>
-                            {(release_date || first_air_date).split('-').join(' ')}
-                        </span>
+                                <Modal movie={movie} />
+                            
+                                <div className='extra-info'>
+                                    <span className='in-theather'>In theaters</span>
+                                    <br />
+                                    <span className='release'>
+                                        {(movie.release_date || movie.first_air_date).split('-').join(' ')}
+                                    </span>
+                                </div>    
+                            </div>
                     </div>
-                </div>
-            </div>
+                </Fragment>
+            ))}
         </Fragment>
     );
 };

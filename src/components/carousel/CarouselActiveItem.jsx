@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import gen from '../../assets/genres.js';
 
 export default ({movies}) => {
@@ -41,7 +41,7 @@ export default ({movies}) => {
                             </div>
                         </div>
                     </Fragment>
-                )
+                );
             })}
         </div>
     );
