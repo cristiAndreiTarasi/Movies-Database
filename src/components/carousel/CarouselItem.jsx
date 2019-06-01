@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import gen from '../../assets/genres.js';
 import { BASE_URL, API_KEY, YOUTUBE_LINK } from '../../assets/api_bits.js';
-import Modal from './Modal.jsx';
+import Modal from '../modal/Modal.jsx';
 
 export default ({data}) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';

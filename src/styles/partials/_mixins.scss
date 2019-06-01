@@ -1,0 +1,13 @@
+
+@mixin font_style ($family, $size, $weight, $color: false, $lHeight: false) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $lHeight;
+}
+
+@mixin size ($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

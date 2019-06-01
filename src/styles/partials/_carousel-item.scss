@@ -39,26 +39,20 @@
             font-weight: 400;
             border-radius: 50px;
             margin-left: 0;
-            margin-bottom: 170px;
+            margin-bottom: 150px;
         }
 
         .extra-info {
             .in-theather {
                 display: block;
-                font-family: 'Lato', sans-serif;
-                font-weight: 300;
-                font-size: 1rem;
                 letter-spacing: .2rem;
-                border-radius: 50px;
-                margin-left: 0;
                 text-align: left;
-                line-height: 20px;
+
+                @include font_style ('Lato', 1rem, 300);
             }
             
             .release {
-                font-weight: 400;
-                font-size: 1.3rem;
-                color: #e4bb23;
+                @include font_style ('Lato', 2rem, 300, #e4bb23);
             }
         }
     }

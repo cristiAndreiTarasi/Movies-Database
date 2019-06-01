@@ -14,11 +14,13 @@ export default ({movies}) => (
 
                 <div className="carousel-inner">
                     <CarouselActiveItem movies={movies} />
+                    
                     {movies.map (movie => (
                         <div className="carousel-item">
                             <CarouselItem data={movie} key={movie.id} />
                         </div>
                     ))}
+                    
                 </div>
                 <CarouselControls />
             </div>

@@ -1,6 +1,7 @@
 
 @import "~bootstrap/scss/bootstrap";
 /*@import './partials/_reset';*/
+@import './partials/_mixins';
 
 // Fonts
 
@@ -16,6 +17,7 @@
 @import './partials/_navbar';
 @import './partials/_slider';
 @import './partials/_carousel-item';
+@import './partials/_footer';
 
 // Main Body
 @import './partials/_panel-group';

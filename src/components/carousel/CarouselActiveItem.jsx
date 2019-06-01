@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import gen from '../../assets/genres.js';
+import Modal from '../modal/Modal.jsx';
 
 export default ({movies}) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w1280/';
@@ -27,10 +28,11 @@ export default ({movies}) => {
                                             : null
                                     ))}
                                 </p>
-                                <button type="button" className="btn btn-warning">
+                               {/*  <button type="button" className="btn btn-warning">
                                     <span>Watch Trailer &nbsp;</span>
                                     <i className="far fa-play-circle"></i>
-                                </button>
+                                </button> */}
+                                <Modal data={movies[random]} /* video={video} */ />
                                 <div className='extra-info'>
                                     <span className='in-theather'>In theaters</span>
                                     <br />

@@ -1,0 +1,56 @@
+footer {
+    background-color: #fff;
+    height: 124px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    height: 124px;
+
+        
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            
+            img {
+                width: 100px;
+            }
+        }
+    
+        .copy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font_style ('Lato', 1.3em, 0, #bbb, false);
+        }
+        
+        .social {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            height: 124px;
+    
+            .social-item {
+                // background-color: red;
+                padding: 0 20px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+                
+                a {
+                    color: #bbb;
+                    text-transform: uppercase;
+                    font-size: .8rem;
+                    letter-spacing: 3px;
+                    font-family: 'Lato', sans-serif;
+                }
+            } 
+        }
+    }
+}

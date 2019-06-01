@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import gen from '../../assets/genres.js';
 import { BASE_URL, API_KEY, IMG_URL, YOUTUBE_LINK } from '../../assets/api_bits.js';
-import Modal from './Modal.jsx';
+import Modal from '../modal/Modal.jsx';
 
 export default ({data}) => { 
     const [video, setVideo] = useState(YOUTUBE_LINK);
