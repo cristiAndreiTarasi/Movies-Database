@@ -8,9 +8,7 @@ export default () => (
             </div>
     
             <div className="copy">
-                <div class="footer-copyright text-center py-3">© Copyright:
-                    <a href="#"> Movie Database</a>
-                </div>
+                <div>© Copyright <strong>Movies Database</strong></div>
             </div>
             
             <ul className="social">

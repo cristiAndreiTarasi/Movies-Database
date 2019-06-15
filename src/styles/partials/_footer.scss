@@ -7,13 +7,14 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 0;
-    height: 124px;
+        height: 124px;
 
         
         .logo {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            width: 30%;
             
             img {
                 width: 100px;
@@ -24,19 +25,21 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            @include font_style ('Lato', 1.3em, 0, #bbb, false);
+            @include font_style ('Lato', 1.3em, 300, #ababab, false);
+            width: 30%;
         }
         
         .social {
             display: flex;
+            justify-content: flex-end;
             align-items: center;
             padding: 0;
             margin: 0;
             list-style: none;
             height: 124px;
+            width: 30%;
     
             .social-item {
-                // background-color: red;
                 padding: 0 20px;
 
                 &:last-child {
@@ -44,7 +47,7 @@ footer {
                 }
                 
                 a {
-                    color: #bbb;
+                    color: #ababab;
                     text-transform: uppercase;
                     font-size: .8rem;
                     letter-spacing: 3px;

@@ -19,4 +19,12 @@
         // mix-blend-mode: multiply;
         z-index: 1;
     }
+
+    form {
+        background-color: red;
+        margin: -100px auto 100px auto;
+        width: 60%;   
+        height: 100px;
+        background-color: #f3f3f3;
+    }
 }

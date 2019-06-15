@@ -8,7 +8,6 @@
         flex-direction: column;
         justify-items: start;
         align-items: flex-start;
-        // background-color: red;
         width: 91%;
         height: 420px;
 
@@ -40,20 +39,21 @@
             border-radius: 50px;
             margin-left: 0;
             margin-bottom: 150px;
+            padding: 10px 20px;
+
         }
 
-        .extra-info {
-            .in-theather {
-                display: block;
-                letter-spacing: .2rem;
-                text-align: left;
+        .extra-info .in-theather {
+            display: inline-block;
+            letter-spacing: .2rem;
+            width: 100%;
+            text-align: left;
 
-                @include font_style ('Lato', 1rem, 300);
-            }
-            
-            .release {
-                @include font_style ('Lato', 2rem, 300, #e4bb23);
-            }
+            @include font_style ('Lato', 1rem, 300);
+        }
+        
+        .extra-info .release {
+            @include font_style ('Lato', 1.5rem, 300, #e4bb23);
         }
     }
 }

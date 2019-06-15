@@ -10,7 +10,7 @@ export default ({movies}) => (
         <div className='jumbotron'>
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 
-                <CarouselIndicators movies={movies}/>
+                {/*<CarouselIndicators movies={movies}/>*/}
 
                 <div className="carousel-inner">
                     <CarouselActiveItem movies={movies} />
@@ -22,7 +22,22 @@ export default ({movies}) => (
                     ))}
                     
                 </div>
+
                 <CarouselControls />
+
+
+                <form>
+                    <div class="input-group mb-3">
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            placeholder="Find Movies & TV Shows" 
+                        />
+                        <div className="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </Fragment>
