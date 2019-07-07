@@ -29,9 +29,9 @@ export default ({
                 <div className="c-modal__body">
                     <div className='container'>
                         <h1>{data.title}</h1>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div className="embed-responsive embed-responsive-16by9">
                             <iframe 
-                                class="embed-responsive-item" 
+                                className="embed-responsive-item" 
                                 src={video}
                                 allowFullScreen
                             ></iframe>

@@ -10,7 +10,7 @@ export default ({movies}) => {
         <div className="carousel-item active">
             {movies.map ((movie, index) => {
                 return index === random && (
-                    <Fragment>
+                    <div  key={movie.id}>
                         <img 
                             className="carousel-item-img" 
                             alt="First slide" 
@@ -42,7 +42,7 @@ export default ({movies}) => {
                                 </div>
                             </div>
                         </div>
-                    </Fragment>
+                    </div>
                 )
             })}
         </div>

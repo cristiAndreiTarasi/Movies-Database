@@ -14,19 +14,19 @@ export default () => (
             <ul className="social">
                 <li className="social-item">
                     <a href='#'>
-                        <i class="fab fa-twitter fa-2x"></i>
+                        <i className="fab fa-twitter fa-2x"></i>
                     </a>
                 </li>
 
                 <li className="social-item">
                     <a href='#'>
-                        <i class="fab fa-facebook-square fa-2x"></i>
+                        <i className="fab fa-facebook-square fa-2x"></i>
                     </a>
                 </li>
 
                 <li className="social-item">
                     <a href='#'>
-                        <i class="fab fa-instagram fa-2x"></i>
+                        <i className="fab fa-instagram fa-2x"></i>
                     </a>
                 </li>
             </ul>

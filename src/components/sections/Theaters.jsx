@@ -7,7 +7,8 @@ import loadRating from '../../assets/movie_rating';
 // components
 import Carousel from '../carousel/Carousel.jsx';
 import MoviesList from '../movies_list/MoviesList.jsx';
-import LoadMoreButton from './LoadMoreButton.jsx';
+// import LoadMoreButton from './LoadMoreButton.jsx';
+import Pagination from './Pagination.jsx';
 
 export default () => {
     const [movies, setMovies] = useState([]);
@@ -33,16 +34,27 @@ export default () => {
         loadMovies();
     }, [page]);
 
-    const addNextPage = event => {
+    /*const addNextPage = event => {
         setPage(prevPage => prevPage + 1);
         event.preventDefault();
+    };*/
+
+    const changePages = e => {
+        setPage(e => parseInt(e.target.innerHTML));
+        // console.log(page)
     };
+    const nextPage = e => {}; 
+    const prevPage = e => {}; 
 
     return (
        <>
             <Carousel movies={movies} />
             <MoviesList movies={movies} />
-            <LoadMoreButton addNextPage={addNextPage} />
+            <Pagination 
+                movies={movies} 
+                changePages={changePages}
+            />
+            {/*<LoadMoreButton addNextPage={addNextPage} /> */}
        </>
     );
 };

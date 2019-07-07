@@ -16,7 +16,7 @@ export default ({movies}) => (
                     <CarouselActiveItem movies={movies} />
                     
                     {movies.map (movie => (
-                        <div className="carousel-item">
+                        <div className="carousel-item" key={movie.id} >
                             <CarouselItem data={movie} key={movie.id} />
                         </div>
                     ))}
@@ -27,14 +27,14 @@ export default ({movies}) => (
 
 
                 <form>
-                    <div class="input-group mb-3">
+                    <div className="input-group mb-3">
                         <input 
                             type="text" 
                             className="form-control" 
                             placeholder="Find Movies & TV Shows" 
                         />
                         <div className="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                            <button className="btn btn-outline-secondary" type="button">Search</button>
                         </div>
                     </div>
                 </form>

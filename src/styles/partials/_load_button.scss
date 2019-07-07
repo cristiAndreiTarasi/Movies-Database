@@ -20,3 +20,21 @@
         }
     }
 }
+
+.pagination {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .active .page-link {
+        background-color: #e4bb23;
+        border: 1px solid #e4bb23;
+
+    }
+
+    .page-link:focus {
+        outline: none;
+    }
+}
