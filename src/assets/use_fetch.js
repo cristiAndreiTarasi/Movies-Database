@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import loadRating from './movie_rating';
+import loadRating from './movie_rating.js';
 
 export default (url) => {
     const [movies, setMovies] = useState([]);
