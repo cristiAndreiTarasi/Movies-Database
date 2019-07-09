@@ -5,7 +5,7 @@ export default function ({ totalPages, page, setPage }) {
     // let disabled = page == 1 ? 'disabled' : '';
 
     for (let i = 1; i < totalPages; i++) {
-        let active = page == i ? 'active' : '';
+        let active = page === i ? 'active' : '';
         pages.push(
             <li 
                 key={i}
@@ -19,14 +19,12 @@ export default function ({ totalPages, page, setPage }) {
         );
     }
 
-
-
     return (
         <nav aria-label="...">
             <ul className="pagination">
                 {page !== 1 ? (
                     <li 
-                        className={`page-item ${page == 1 ? 'disabled' : ''}`}
+                        className={`page-item ${page === 1 ? 'disabled' : ''}`}
                         onClick={() => setPage(page - 1)}
                     >
                         <a className="page-link" href="#" tabIndex="-1">Previous</a>
@@ -37,7 +35,7 @@ export default function ({ totalPages, page, setPage }) {
 
                 {page !== 11 ? (
                     <li 
-                        className={`page-item ${page == 11 ? 'disabled' : ''}`}
+                        className={`page-item ${page === pages.length ? 'disabled' : ''}`}
                         onClick={() => setPage(page + 1)}
                     >
                         <a className="page-link" href="#">Next</a>

@@ -25,3 +25,4 @@ export default (url) => {
 
     return movies;
 };
+
