@@ -1,5 +1,5 @@
 {
-    "name": "new_movies_database",
+    "name": "movies_database",
     "version": "1.0.0",
     "description": "Packages for Movie Database",
     "main": "index.js",
