@@ -1,5 +1,4 @@
 
-
 export default () => {
     const panelRating = document.querySelectorAll('.panel-rating p');
 

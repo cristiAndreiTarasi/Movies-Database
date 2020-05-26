@@ -4,6 +4,7 @@ import CarouselItem from './CarouselItem.jsx';
 import CarouselIndicators from './CarouselIndicators.jsx';
 import CarouselActiveItem from './CarouselActiveItem.jsx';
 import CarouselControls from './CarouselControls.jsx';
+import SeachMovie from './SearchMovie.jsx';
 
 export default ({movies}) => (
     <Fragment>
@@ -24,20 +25,7 @@ export default ({movies}) => (
                 </div>
 
                 <CarouselControls />
-
-
-                <form>
-                    <div className="input-group mb-3">
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            placeholder="Find Movies & TV Shows" 
-                        />
-                        <div className="input-group-append">
-                            <button className="btn btn-outline-secondary" type="button">Search</button>
-                        </div>
-                    </div>
-                </form>
+                {/*<SeachMovie />*/}
             </div>
         </div>
     </Fragment>
